@@ -1,4 +1,4 @@
-package hoya;
+package org.apache.hoya;
 
 public interface FlexCluster {
 

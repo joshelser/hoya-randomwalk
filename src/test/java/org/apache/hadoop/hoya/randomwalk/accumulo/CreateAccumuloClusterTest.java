@@ -14,16 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hadoop.hoya.accumulo;
+package org.apache.hadoop.hoya.randomwalk.accumulo;
 
 import java.util.List;
 import java.util.Properties;
 
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.error.InMemoryErrorReporter;
-import org.apache.hadoop.hoya.HoyaConfig;
 import org.apache.hadoop.hoya.providers.accumulo.AccumuloClientProvider;
 import org.apache.hadoop.hoya.providers.accumulo.AccumuloConfigFileOptions;
+import org.apache.hadoop.hoya.randomwalk.HoyaConfig;
+import org.apache.hadoop.hoya.randomwalk.accumulo.CreateAccumuloCluster;
 import org.apache.hadoop.hoya.yarn.Arguments;
 import org.junit.Assert;
 import org.junit.Before;

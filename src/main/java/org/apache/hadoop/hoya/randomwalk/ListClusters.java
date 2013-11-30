@@ -1,4 +1,4 @@
-package org.apache.hadoop.hoya;
+package org.apache.hadoop.hoya.randomwalk;
 
 import java.util.Arrays;
 import java.util.List;

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hadoop.hoya;
+package org.apache.hadoop.hoya.randomwalk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,8 @@ import java.util.Properties;
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.error.ErrorReport;
 import org.apache.accumulo.randomwalk.error.InMemoryErrorReporter;
+import org.apache.hadoop.hoya.randomwalk.HoyaConfig;
+import org.apache.hadoop.hoya.randomwalk.ListClusters;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

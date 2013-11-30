@@ -1,4 +1,4 @@
-package org.apache.hadoop.hoya;
+package org.apache.hadoop.hoya.randomwalk;
 
 import org.apache.accumulo.randomwalk.State;
 import org.apache.hadoop.hoya.yarn.Arguments;

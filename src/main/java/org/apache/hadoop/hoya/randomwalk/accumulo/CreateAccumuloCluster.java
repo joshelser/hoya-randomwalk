@@ -1,16 +1,16 @@
-package org.apache.hadoop.hoya.accumulo;
+package org.apache.hadoop.hoya.randomwalk.accumulo;
 
 import java.util.List;
 import java.util.Properties;
 
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.Test;
-import org.apache.hadoop.hoya.Constants;
-import org.apache.hadoop.hoya.CreateCluster;
-import org.apache.hadoop.hoya.HoyaProcessBuilder;
 import org.apache.hadoop.hoya.providers.accumulo.AccumuloClientProvider;
 import org.apache.hadoop.hoya.providers.accumulo.AccumuloConfigFileOptions;
 import org.apache.hadoop.hoya.providers.accumulo.AccumuloKeys;
+import org.apache.hadoop.hoya.randomwalk.Constants;
+import org.apache.hadoop.hoya.randomwalk.CreateCluster;
+import org.apache.hadoop.hoya.randomwalk.HoyaProcessBuilder;
 import org.apache.hadoop.hoya.yarn.Arguments;
 import org.apache.hadoop.hoya.yarn.HoyaActions;
 import org.slf4j.Logger;

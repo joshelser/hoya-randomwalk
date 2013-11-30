@@ -1,4 +1,4 @@
-package org.apache.hadoop.hoya;
+package org.apache.hadoop.hoya.randomwalk;
 
 public interface Constants {
   public static final String SPACE = " ";

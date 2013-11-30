@@ -1,4 +1,4 @@
-package org.apache.hadoop.hoya.randomwalk;
+package org.apache.hadoop.hoya.randomwalk.conf;
 
 public class HoyaConfig {
   public static final String COMMAND = "hoya.cmd";

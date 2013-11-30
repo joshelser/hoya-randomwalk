@@ -16,9 +16,20 @@
  */
 package org.apache.hadoop.hoya.randomwalk;
 
+import java.util.Properties;
+
+import org.apache.accumulo.randomwalk.State;
+import org.apache.accumulo.randomwalk.Test;
+
 /**
  * 
  */
-public interface DestroyCluster {
+public class DestroyCluster extends Test {
+
+  @Override
+  public void visit(State state, Properties props) throws Exception {
+    // TODO Auto-generated method stub
+    
+  }
 
 }

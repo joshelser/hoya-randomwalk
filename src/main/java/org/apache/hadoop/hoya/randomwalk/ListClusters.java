@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.Test;
+import org.apache.hadoop.hoya.randomwalk.conf.RandomwalkHoyaConfiguration;
 import org.apache.hadoop.hoya.yarn.HoyaActions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

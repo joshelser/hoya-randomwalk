@@ -10,7 +10,7 @@ import org.apache.hadoop.hoya.providers.accumulo.AccumuloConfigFileOptions;
 import org.apache.hadoop.hoya.providers.accumulo.AccumuloKeys;
 import org.apache.hadoop.hoya.randomwalk.Constants;
 import org.apache.hadoop.hoya.randomwalk.CreateCluster;
-import org.apache.hadoop.hoya.randomwalk.RandomwalkHoyaConfiguration;
+import org.apache.hadoop.hoya.randomwalk.conf.RandomwalkHoyaConfiguration;
 import org.apache.hadoop.hoya.yarn.Arguments;
 import org.apache.hadoop.hoya.yarn.HoyaActions;
 import org.slf4j.Logger;

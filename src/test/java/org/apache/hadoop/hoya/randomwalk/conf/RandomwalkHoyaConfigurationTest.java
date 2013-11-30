@@ -14,13 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hadoop.hoya.randomwalk;
+package org.apache.hadoop.hoya.randomwalk.conf;
 
 import java.util.Properties;
 
 import org.apache.accumulo.randomwalk.Node;
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.error.InMemoryErrorReporter;
+import org.apache.hadoop.hoya.randomwalk.conf.HoyaConfig;
+import org.apache.hadoop.hoya.randomwalk.conf.RandomwalkHoyaConfiguration;
 import org.junit.Assert;
 import org.junit.Test;
 

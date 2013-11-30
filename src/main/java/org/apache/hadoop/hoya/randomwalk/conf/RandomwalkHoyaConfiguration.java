@@ -1,8 +1,9 @@
-package org.apache.hadoop.hoya.randomwalk;
+package org.apache.hadoop.hoya.randomwalk.conf;
 
 import org.apache.accumulo.randomwalk.Node;
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.error.ErrorReport;
+import org.apache.hadoop.hoya.randomwalk.Constants;
 import org.apache.hadoop.hoya.yarn.Arguments;
 
 import com.google.common.base.Preconditions;

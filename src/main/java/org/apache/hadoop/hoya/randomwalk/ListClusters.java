@@ -6,7 +6,6 @@ import java.util.Properties;
 
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.Test;
-import org.apache.accumulo.randomwalk.error.ErrorReport;
 import org.apache.hadoop.hoya.yarn.HoyaActions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,31 +37,12 @@ public class ListClusters extends Test {
   }
 
   protected List<String> getCommand(State state) {
-    HoyaProcessBuilder hoyaBuilder = new HoyaProcessBuilder(state);
+    RandomwalkHoyaConfiguration hoyaBuilder = new RandomwalkHoyaConfiguration(this.getClass(), state);
+    
     String hoyaCmd = hoyaBuilder.getHoyaCommand();
-    
-    if (null == hoyaCmd) {
-      state.getErrorReporter().addError(new ErrorReport(ListClusters.class, HoyaConfig.COMMAND + " was not defined"));
-      throw new IllegalArgumentException("Missing configuration value for " + HoyaConfig.COMMAND);
-    }
-    
     String action = HoyaActions.ACTION_LIST;
-    
-    String manager;
-    try {
-      manager = hoyaBuilder.getManagerWithOption();
-    } catch (IllegalArgumentException e) {
-      state.getErrorReporter().addError(new ErrorReport(ListClusters.class, HoyaConfig.MANAGER + " was not defined"));
-      throw e;
-    }
-    
-    String filesystem;
-    try {
-      filesystem = hoyaBuilder.getFilesystemWithOption();
-    } catch (IllegalArgumentException e) {
-      state.getErrorReporter().addError(new ErrorReport(ListClusters.class, HoyaConfig.FILESYSTEM + " was not defined"));
-      throw e;
-    }
+    String manager = hoyaBuilder.getManagerWithOption();
+    String filesystem = hoyaBuilder.getFilesystemWithOption();
     
     return Arrays.asList(hoyaCmd, action, manager, filesystem);
   }

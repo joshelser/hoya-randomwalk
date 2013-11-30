@@ -1,14 +1,18 @@
 package org.apache.hadoop.hoya.randomwalk;
 
+import org.apache.accumulo.randomwalk.Node;
 import org.apache.accumulo.randomwalk.State;
+import org.apache.accumulo.randomwalk.error.ErrorReport;
 import org.apache.hadoop.hoya.yarn.Arguments;
 
 import com.google.common.base.Preconditions;
 
-public class HoyaProcessBuilder {
+public class RandomwalkHoyaConfiguration {
+  private Class<? extends Node> invokingClass;
   private State state;
   
-  public HoyaProcessBuilder(State state) {
+  public RandomwalkHoyaConfiguration(Class<? extends Node> invoker, State state) {
+    this.invokingClass = invoker;
     this.state = state;
   }
   
@@ -95,7 +99,9 @@ public class HoyaProcessBuilder {
     String value = state.getProperty(key);
     
     if (null == value) {
-      throw new IllegalArgumentException(key + " was not provided in configuration.");
+      String msg = key + " was not provided in configuration.";
+      state.getErrorReporter().addError(new ErrorReport(invokingClass, msg));
+      throw new IllegalArgumentException(msg);
     }
     
     return value;

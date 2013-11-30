@@ -30,6 +30,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
 /**
@@ -42,6 +43,11 @@ public class CreateAccumuloClusterTest {
   @Before
   public void setup() {
     create = new CreateAccumuloCluster();
+  }
+  
+  @Test
+  public void testMissingParams() throws Exception {
+    
   }
 
   @Test
@@ -71,6 +77,8 @@ public class CreateAccumuloClusterTest {
         Arguments.ARG_OPTION, AccumuloClientProvider.OPTION_ACCUMULO_PASSWORD, "password");
 
     Assert.assertEquals(expectedCommand, actualCommand);
+    
+    Assert.assertEquals(0, Iterables.size(state.getErrorReporter().report()));
   }
 
   @Test
@@ -102,6 +110,8 @@ public class CreateAccumuloClusterTest {
             + AccumuloConfigFileOptions.MONITOR_PORT_CLIENT, "12345");
 
     Assert.assertEquals(expectedCommand, actualCommand);
+    
+    Assert.assertEquals(0, Iterables.size(state.getErrorReporter().report()));
   }
 
 }

@@ -10,7 +10,7 @@ import org.apache.hadoop.hoya.providers.accumulo.AccumuloConfigFileOptions;
 import org.apache.hadoop.hoya.providers.accumulo.AccumuloKeys;
 import org.apache.hadoop.hoya.randomwalk.Constants;
 import org.apache.hadoop.hoya.randomwalk.CreateCluster;
-import org.apache.hadoop.hoya.randomwalk.HoyaProcessBuilder;
+import org.apache.hadoop.hoya.randomwalk.RandomwalkHoyaConfiguration;
 import org.apache.hadoop.hoya.yarn.Arguments;
 import org.apache.hadoop.hoya.yarn.HoyaActions;
 import org.slf4j.Logger;
@@ -46,7 +46,7 @@ public class CreateAccumuloCluster extends Test implements CreateCluster {
   }
 
   public List<String> getCommand(State state) {
-    HoyaProcessBuilder hoyaBuilder = new HoyaProcessBuilder(state);
+    RandomwalkHoyaConfiguration hoyaBuilder = new RandomwalkHoyaConfiguration(this.getClass(), state);
 
     List<String> command = Lists.newArrayList(hoyaBuilder.getHoyaCommand());
 

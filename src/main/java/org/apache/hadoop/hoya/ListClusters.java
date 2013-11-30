@@ -1,4 +1,4 @@
-package org.apache.hoya;
+package org.apache.hadoop.hoya;
 
 import java.util.Arrays;
 import java.util.List;

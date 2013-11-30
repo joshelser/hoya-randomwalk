@@ -1,4 +1,4 @@
-package org.apache.hoya;
+package org.apache.hadoop.hoya;
 
 public interface ThawCluster {
 

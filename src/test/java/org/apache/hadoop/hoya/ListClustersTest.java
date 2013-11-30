@@ -14,19 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hoya;
+package org.apache.hadoop.hoya;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.NoSuchElementException;
 import java.util.Properties;
 
 import org.apache.accumulo.randomwalk.State;
 import org.apache.accumulo.randomwalk.error.ErrorReport;
 import org.apache.accumulo.randomwalk.error.InMemoryErrorReporter;
-import org.apache.hoya.HoyaConfig;
-import org.apache.hoya.ListClusters;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +32,7 @@ import com.google.common.collect.Lists;
 
 public class ListClustersTest {
 
-  private ListClusters list = new ListClusters();
+  private ListClusters list;
 
   @Before
   public void setup() {

@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.hoya;
+package org.apache.hadoop.hoya;
 
 /**
  * 
  */
-public interface GetClusterConf {
+public interface DestroyCluster {
 
 }

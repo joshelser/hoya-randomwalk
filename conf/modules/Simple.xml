@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module>
+  <package prefix="rw" value="org.apache.hadoop.hoya.randomwalk" />
+  <package prefix="accumulo" value="org.apache.hadoop.hoya.randomwalk.accumulo" />
+  <package prefix="hbase" value="org.apache.hadoop.hoya.randomwalk.hbase" />
+
+  <init id="accumulo.CreateAccumuloCluster" />
+
+  <node id="accumulo.CreateAccumuloCluster">
+    <edge id="rw.Sleep" weight="1" />
+  </node>
+
+  <node id="rw.Sleep">
+    <edge id="rw.FreezeCluster" weight="1" />
+  </node>
+
+  <node id="rw.FreezeCluster">
+    <edge id="rw.DestroyCluster" weight="1" />
+  </node>
+
+  <node id="rw.DestroyCluster">
+    <edge id="END" weight="1" />
+  </node>
+</module>
+
